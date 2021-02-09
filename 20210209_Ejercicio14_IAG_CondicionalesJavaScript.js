@@ -65,3 +65,47 @@ if (helado == "no") {
     alert("Recarga la página e introduce la palabra correcta de entre las opciones propuestas.");
     console.log("Fallo.");
 };
+
+// Ejercicio de calcular la letra del DNI.
+let dni = prompt("Introduce tu nº de DNI, sin letra.");
+// Lo que se introduce por el 'prompt' es una cadena de textos. 
+// Se puede poner 'parseInt' para convertir cadena de texto en número entero.
+let division = dni%23;
+// let division = parseInt(dni%23);
+
+const letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z',
+'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+if ((dni > 0) && (dni < 99999999)) {
+    alert("Tu letra de DNI es " + letras[division]);
+} 
+else if ((dni < 0) || (dni > 99999999)) {
+    alert("Número no válido.");
+} 
+else {
+    alert("Has introduido texto.");
+};
+
+// Ejercicio del diámetro de la rueda.
+let diametro = prompt("Introduce el diámetro de la rueda, en metros.");
+
+if (diametro > 1.4) {
+    let grosor = prompt("Introduce el grosor de la rueda, en metros.");
+    if (grosor < 0.4) {
+        alert("La rueda es para un vehículo grande, pero el grosor para esta rueda es inferior al recomendado.");
+    } else {
+        alert("La rueda es para un vehículo grande y el grosor de la rueda es adecuado.");
+    }
+} else if (diametro <= 1.4 && diametro > 0.8) {
+    let grosor = prompt("Introduce el grosor de la rueda, en metros.");
+    if (grosor < 0.25) {
+        alert("La rueda es para un vehículo mediano, pero el grosor para esta rueda es inferior al recomendado.");
+    } else {
+        alert("La rueda es para un vehículo mediano y el grosor de la rueda es adecuado.");
+    }
+} else if (diametro < 0.8) {
+    alert("La rueda es para un vehículo pequeño.");
+} else {
+    alert("No has metido un múmero, eso es texto.");
+};
+
