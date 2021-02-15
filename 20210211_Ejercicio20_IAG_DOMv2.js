@@ -23,3 +23,24 @@ resultado2.innerHTML = "El penúltimo enlace es: " + enlaces[(enlaces.length)-2]
 
 const resultado3 = document.getElementById("resultado3");
 resultado3.innerHTML = "El número de enlaces del tercer párrafo es: " + enlacesTercer.getElementsByTagName("a").length + ".";
+
+// Escribir los resultados al final de la página creando nodos.
+const indice = document.createElement('h2');
+const contenidoIndice = document.createTextNode("Resultados v2");
+indice.appendChild(contenidoIndice);
+document.body.appendChild(indice);
+
+const parrafo1 = document.createElement('p');
+const contenido1 = document.createTextNode("El número de enlaces de la páginas es " + enlaces.length + ".");
+parrafo1.appendChild(contenido1);
+document.body.appendChild(parrafo1);
+
+const parrafo2 = document.createElement('p');
+const contenido2 = document.createTextNode("El penúltimo enlace es: " + enlaces[(enlaces.length)-2]);
+parrafo2.appendChild(contenido2);
+document.body.appendChild(parrafo2);
+
+const parrafo3 = document.createElement('p');
+const contenido3 = document.createTextNode("El número de enlaces de la páginas es " + enlaces.length + ".");
+parrafo3.appendChild(contenido3);
+document.body.appendChild(parrafo3);
