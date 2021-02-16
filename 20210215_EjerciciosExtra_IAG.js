@@ -2,17 +2,16 @@
 let year = parseInt(prompt("¿En qué año estamos?"));
 if (year%4 == 0) {
     alert("Es un año bisiesto.");
-} else {
-    if ((year+1)%4 == 0) {
+} else if ((year+1)%4 == 0) {
         alert("El póximo año bisiesto es " + (year+1));
     } else if ((year+2)%4 == 0) {
         alert("El póximo año bisiesto es " + (year+2));            
     } else if ((year+3)%4 == 0) {
         alert("El póximo año bisiesto es " + (year+3));
     };
-};
 
-// Ejercicio 2:
+
+// // Ejercicio 2:
 const users = [
     {username: 'ppc90', age: 30, premium: true},
     {username: 'ana', age: 35, premium: false},
@@ -31,6 +30,26 @@ for (const user of users) {
     };
 };
 console.log(noPremium);
+
+// Ejercicio v2:
+const usersv2 = [
+    {username: 'ppc90', age: 30, premium: true},
+    {username: 'ana', age: 35, premium: false},
+    {username: 'matilda', age: 21, premium: true},
+    {username: 'paco80', age: 22, premium: true},
+    {username: 'juana8', age: 52, premium: true},
+    {username: 'alonso23', age: 40, premium: false},
+    {username: 'ines777', age: 20, premium: false},
+];
+const Premiumv2 = usersv2
+    .filter(user => user.premium==true)
+    .map(user => console.log(`El usuario ${user.username} tiene suscripción premium.`));
+
+const noPremiumv2 = usersv2.filter(function(user){
+    return (user.premium==false);
+});
+console.log(noPremiumv2);
+
 
 // Ejercicio 3:
 const scores = [

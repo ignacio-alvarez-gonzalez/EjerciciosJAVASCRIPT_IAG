@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#contenido {
+    display: flex;
+    flex-direction: column;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+}
+
+.caja{
+    display: flex;
+    position: relative;
+    height: 350px;
+    width: 50%;
+    content: fill;
+    color: white;
+}
+
+#caja1 {
+    background-color: black;
+    
+}
+
+#caja2 {
+    background-color: orange;
+}
+
+#caja3 {
+    background-color: blue;
+}
+
+#caja4 {
+    background-color: grey;
+}
+
+p {
+    padding: 10px;
+    margin: 0px;
+}
